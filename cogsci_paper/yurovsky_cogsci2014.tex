@@ -1,0 +1,229 @@
+% 
+% Annual Cognitive Science Conference
+% Sample LaTeX Paper -- Proceedings Format
+% 
+
+% Original : Ashwin Ram (ashwin@cc.gatech.edu)       04/01/1994
+% Modified : Johanna Moore (jmoore@cs.pitt.edu)      03/17/1995
+% Modified : David Noelle (noelle@ucsd.edu)          03/15/1996
+% Modified : Pat Langley (langley@cs.stanford.edu)   01/26/1997
+% Latex2e corrections by Ramin Charles Nakisa        01/28/1997 
+% Modified : Tina Eliassi-Rad (eliassi@cs.wisc.edu)  01/31/1998
+% Modified : Trisha Yannuzzi (trisha@ircs.upenn.edu) 12/28/1999 (in process)
+% Modified : Mary Ellen Foster (M.E.Foster@ed.ac.uk) 12/11/2000
+% Modified : Ken Forbus                              01/23/2004
+% Modified : Eli M. Silk (esilk@pitt.edu)            05/24/2005
+% Modified: Niels Taatgen (taatgen@cmu.edu) 10/24/2006
+
+%% Change ``a4paper'' in the following line to ``letterpaper'' if you are
+%% producing a letter-format document.
+
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{cogsci}
+\usepackage{pslatex}
+\usepackage[nodoi]{apacite}
+\usepackage{graphicx}
+\usepackage[american]{babel}
+\usepackage{amsmath}
+\usepackage[section]{placeins}
+
+\title{Salience and Social Cues in Early Word Learning}
+ 
+ \author{{\large \bf Daniel Yurovsky} \\ \texttt{yurovsky@stanford.edu}\\ Department of Psychology \\ Stanford University
+	\And {\large \bf Michael C. Frank} \\ \texttt{mcfrank@stanford.edu} \\ Department of Psychology \\ Stanford University}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+
+Children learn their first words from social partners, but it is unclear to what extend they are attuned to these partners' social cues. Some theories argue that word learning is fundamentally social from its outset, with even the youngest infants understanding intentions and using them to infer a social partner's target of reference. In contrast, other theories argue that early word learning is fundamentally a perceptual process in which young children map words onto salient objects. Only gradually do children learn the predictive power of social cues like eye gaze weigh them more than perceptual cues like visual salience. We present a set of experiments that manipulate social and salience cues to reference across development. Our results show that children gradually improve in following social cues well into their fourth year, but that this does not produce decreased attention to salience. Further, we show that social and salience cues direct attention at different times, with social cues guiding attention at all ages during learning, but salience cues playing a role at test. Together, these results suggest that the debate may be fundamentally ill-posed, and suggest a new framework for thinking about the role of salience and social cues in early word learning.
+
+\textbf{Keywords:} 
+Language acquisition, word learning, attention, social cues, development
+\end{abstract}
+%
+%OUTLINE
+% 
+%	Children get better and better at word learning over time (Some stats from Bloom, Mayor, etc)
+%	
+%	SOMETHING is likely to improving over this time period (c.f. McMurray). What is it? What accounts for the vocabulary explosion?
+%
+%      Language learning unfolds over time, but each individual instance is real-time (McMurray, Linda, Mike)
+%      
+%	Getting good information from each instance is critical for learning FAST (sparsity arguments, shape bias, etc.)
+%	
+%      That means that becoming a good language learner is about extracting information from these instances - learning to learn
+%      
+%	The requires (at least): 
+%	
+%	1. dealing with referential uncertainty, 
+%	
+%					    2. extracting the relevant label from speech frames, 
+%					    
+%     We know that early CDS has properties that make these things easier
+%     
+%	Children can learn from single-word utterances, multi-modal synchrony, etc. But this leaves them learning from a tiny proportion of their input. 
+%		To do better, they need to get better at these critical skills
+
+
+\section{Introduction}
+
+How do young children learn the meanings of their first words? For example, when an adult produces a novel label in a complex natural scene, how can a child determine to which object---if any---the label refers \cite{Quine1960, Bloom2000}? For adults, this problem is straightforward; in addition to learning a language, adults have learned to consult a speaker’s social gestures and use their understanding of a speaker’s communicative goals \cite{Clark1983}. Social inference also characterizes the word-learning strategies of children late in their second year \cite<e.g,>{Baldwin1991, Brandone2007,Grassmann2010}. But word learning likely begins much earlier, perhaps as early as at 6-months \cite{Tincoff1999, Bergelson2012}. Do very young children use social information to reduce referential uncertainty in early word learning?
+Infants are situated in a social system from their first day of life. Some theories argue that infants leverage this social information from the very outset of word learning \cite{Bloom1998, Waxman2009}. For instance, infants follow direction of gaze by 6-months \cite{D'Entremont1997} and are more likely to do so in the presence of other communicative signals \cite{Senju2008}. Further, children’s successes in following gaze predict language development. Even more impressively, infants show some evidence of representing others’  beliefs, and these representations may affect their expectations by 7-months of age \cite{Kovacs2010}. Infants may thus become sensitive to social cues through pre-linguistic experience, and could, in principle, already use these cues from the outset of word learning \cite{Bruner1983}.
+Nevertheless, competing theories argue that early word learning is primarily a perceptual process \cite{Vygotsky1978}. On these accounts, infants learn words by mapping them onto perceptually salient objects in their learning environments \cite{Smith2000}. Early child-directed naming events are characterized by multi-modal synchrony: mothers move the objects they label in temporal synchrony with the labels they speak \cite{Gogate2000}, and the degree of synchrony predicts word-object mapping in young infants \cite{Gogate2006}. Further, in studies that pit perceptual salience against social information (e.g., a speaker’s gaze), 10-month-old infants show no evidence of attending to gaze \cite{Pruden2006}. Although 10-month-old infants may be able to follow gaze, they seem to treat it as less important than object salience in mapping words to objects. Further, when salience and gaze conflict, providing contradictory cues to the identity of the intended referent, 12- and 15-mo olds fail to learn any mappings at all \cite{Hollich2000, Houston-Price2006}. By 19- and 24- months, however, toddlers robustly learn labels for objects cued by gaze even in the presence of salient competitors \cite{Moore1999, Hollich2000}. These findings suggest a developmental trajectory in which infants learn to learn, gradually building skill in using social cues and discounting salience to learn the meanings of words.
+
+**** The problem with these Hollich experiments is that you can't tell what's developing -- social stuff, attentional stuff, or both. We set up two experiments that let us compare the coincident/conflict trials against gaze alone. We present first experiment 1 which is gaze alone, and then compare these results to those from Experiment 2 which replicates the Hollich design.
+
+*** In addition, we can look at the effects of these cues on both learning and test. Preview result here about social cues winning at all ages in learning trials, but salience cues being important at test. 
+
+\begin{figure*}[t]
+	\center{\includegraphics[width=\textwidth]{figures/tri_fig.pdf}}
+	\caption{\label{fig:design} Example learning trials from Experiments 1 and 2. In Experiment 1 (a), the speaker turned towards one of the equally-salient toys and labeled it four times over the course of approximately 10 seconds. In Experiment 2, the speaker produced the same social cues and the same label as in Experiment 1, but the target object was either the more perceptually salient toy (b), or the less perceptually salient toy (c). Across experiments, we were thus able to determine the contributions of both salience and social information to early word learning outcomes.}
+\end{figure*}
+
+\section{Experiment 1}
+
+\subsection{Method}
+
+*** SAY something about how we normed the stimuli here. Want to completely remove salience as a cue
+
+Children's eye movements were tracked while they watched a series of naturalistic word-learning videos. In each, children saw a speaker seated at a table between two novel toys. She greeted them, and then turned towards one of the toys and labeled it three times in a short monologue.
+After these learning trial, children were tested for their knowledge of the referent for the new word using the Looking While Listening procedure \cite{Fernald1998}. In addition, similar test trials were administered for known objects to measure children's processing of familiar words. 
+
+\subsubsection{Participants}
+
+Parents and their 1--4 year-old children were invited to participate in a short language learning study during their visit to the San Jose Children's Discovery museum. In total, we collected demographic and experimental data from 269 children, 122 of whom were excluded for one or more of the following reasons: abnormal developmental issues ($N= 27$), failure to calibrate ($N=58$), and less than 75\% exposure to English ($N=36$). The final sample consisted of 27 1-1.5 year olds (9 girls), 19 1.5-2 year olds (7 girls), 38 2-2.5 year olds (13 girls), 26 2.5-3 year olds (10 girls), 15 4-3.5 year olds (9 girls), and 22 3.5-4 year olds (11 girls).
+
+\subsubsection{Stimuli}
+
+The experiment consisted of two kinds of trials: learning and test. Learning trials were ~12 second video clips in which a speaker first greeted the the child, and then turned towards one of the two toys on the screen, labeling it three times in a short monologue (Figure~\ref{fig:design}a). On the first learning trial, for example, the speaker said ``Hi there! It's a \emph{modi}. Look at the \emph{modi}. What a nice \emph{modi}.''
+
+Test trials followed the standard Looking While Listening protocol \cite{Fernald1998}. On each test trial, children saw two objects -- one on each side of the screen -- and heard a short audio clip of the speaker from the learning trials asking them to find a target object. Each test trials was 7 seconds long, and the target label was heard at ~2.75 seconds. On \emph{Familiar} test trials, both the target and distractor were common objects familiar to young children (e.g. book vs. dog). On \emph{Novel} and \emph{ME} test trials, children saw both of the toys from the previous learning trials, and were asked to find either the previously named toy (\emph{modi}), or were asked about a novel label (\emph{dax}). 
+
+In addition, the experiment contained two calibration checks: short videos in which small dancing stars appeared in four places on the screen. Because eye-tracker calibration can be imprecise, especially with younger children \cite{Morgante2011}, this check allowed us to adjust initial calibration settings to minimize the discrepancy between the behavior children produced and the behavior we analyzed \cite<for details, see>{Frank2012d}.
+
+\subsubsection{Design and Procedure}
+
+The experiment began with a 4-point calibration and then proceeded into a series of learning/test blocks. In each block, children first watched a learning trial in which a speaker labeled one of two on-screen toys. Following this learning trial, children were given a Looking While Listening test trial in which they saw both of these toys and were asked to find the toy labeled on the previous learning trial (e.g. ``Can you find the \emph{modi}?''). The entire experiment consisted of four learning trials, eight \emph{Familiar}, six \emph{Novel} test trials, and six \emph{Mutual Exclusivity (ME)} test trials.
+
+** Talk about Novel vs. ME trials as a salience/preference check. Foreshadow E2 results.
+
+\subsubsection{Data Analysis}
+
+Children's eye movements during both learning and testing were analyzed using a Regions of Interest (ROI) approach. On learning trials, bounding-box ROIs were drawn by a human coder frame-by-frame for the speaker's face and for the two objects. On test trials, a bound-box ROI was drawn for each of the two static images. To ensure that recorded eye movements were mapped to the correct ROIs, children's calibrations were first adjusted by fitting a robust linear regression for their fixations during the calibration check video and using this model to transform eye movements during the rest of the experiment \cite{Frank2012d}.
+
+Children's learning and test behaviors were quantified by measuring their proportion of looking to each ROI on each trial. To ensure that proportions were representative, individual test trials were excluded from analysis if eye gaze data was missing for more than half of their duration. 
+To compute age-group looking proportions, proportions were computed first for each individual trial, averaged at the individual-child level, and then averaged across children.
+
+Window-of-analysis selection began by coding the point of disambiguation for each trial. This was the onset of the target label for test trials, and the rotation of the speaker's head for learning trials (marked `0' in the graphs in the Results section). The window for each trial began 1s after this point of disambiguation to allow children of all ages enough time to process and continued out to 3s after this point on both learning and test trials. To quantify children's learning with standard analyses, we aggregated these patterns of looking over time to compute the aggregate proportion of looking at the target object on each test trial. 
+
+ \begin{figure}[!b]
+	\center{\includegraphics[width=.5\textwidth]{figures/exp1_train.pdf}}
+	\caption{\label{fig:exp1_train} Children improved in their abilities to recognize familiar words, and to learn from both the \emph{Extended} and \emph{Brief} Cues over the course of development. Individual lines indicate different age groups and error bars indicate $\pm$1SE.}
+\end{figure}
+
+\begin{figure}[!t]
+	\center{\includegraphics[width=.51\textwidth]{figures/exp1_train_test.pdf}}
+	\caption{\label{fig:exp1_train_test} Proportion of time children fixated the correct correct target on each type of test trial in Experiment 1. Each dot indicates one half-year age group and each line represents a 95\% confidence interval computed by non-parametric bootstrap. A proportion of .5 indicates chance performance.}
+\end{figure}	
+
+\subsection{Results}
+
+First, evidence from two analyses suggest that children were attentive to social cues during learning at all ages measured. First, for all age groups, looks to both target and distractor made up the minority of children's dwell times. Instead, children in all age groups spent more than 50\% of their time attending to the speaker's face (Figure~\ref{fig:exp1_train}). Second, children were successful at attending to and following the speaker's social gaze even from the youngest ages measured. Children of all ages spent more time looking at the target than at the distractor during learning trials (smallest $t_{1}(23)  = 3.20$, $p < .01$).
+
+Analyses of test trials showed broad success on Familiar, Novel, and ME trials across development. The 1-year-olds trended towards significance on familiar trials ($t_{1}(26)  = 1.65$, $p = .11$), and were non-significantly in the correct direction on Novel and ME trials. At all other ages, children looked to the target at above-chance levels on all test trials (smallest $t_{1.5}(17)  = 2.10$, $p = .05$). 
+
+In addition, children's abilities both to follow social cues during learning trials and to find the correct target on test trials improved across development. To quantify this improvement, we fit a mixed effects logistic regression to the data \cite{Jaeger2008}. This analysis revealed significant improvement across age ($\beta = .61$, $z = 4.03$, $p <.001$), as well a significant significant effect of Learning as compared to Novel trials ($\beta = 1.18$, $z = 3.11$, $p <.01$). No other effects or interactions approached significance. Figure~\ref{fig:exp1_train_test} shows proportion of looking all kinds of trials at all ages.
+
+\subsection{Discussion}
+
+Together, these results provide clear evidence of a developmental trajectory in both word learning and word recognition (Figure~\ref{fig:exp1_train_test}).
+
+***Improvements in following social gaze, but if it's cue weighting it seems like children are learning better weights really late into word learning. Sort of seems unlikely. Want to prime the intuition pump here about the importance of timing in learning and test. 
+
+\section{Experiment 2}
+
+\subsection{Method}
+
+Experiment 2 was identical to Experiment 1 in all respects except for the identity of the novel toys that served as the target and distractor. In contrast to Experiment 1, in which the two toys were balanced in their visual interest, the two toys in Experiment 2 were intentionally mismatched. For children in the \emph{Salient} condition, the target was the more interesting toy, and the distractor the less interesting toy. In the \emph{Non-Salient} condition, the identities of the toys were switched and the target was the less interesting toy. Thus, Experiment 2 allows us to investigate children's use of social cues to learn new words when they are aligned with salience, and when they are in opposition.
+
+\subsubsection{Participants}
+
+Participants were recruited from the floor of the San Jose Children's Discovery museum as in Experiment 1. This time, however, we focused on the three youngest age groups. In the Salience condition, demographic and experimental data were collected from 117 children, 52 of whom were excluded for one or more of the following reasons: abnormal developmental issues ($N= 13$), failure to calibrate ($N=25$), less than 75\% exposure to English ($N=33$), and inattentiveness ($N=2$). The final sample consisted of 22 1-1.5 year olds (11 girls), 21 1.5-2 year olds (10 girls), 19 2-2.5 year olds (9 girls). In the Non-Salience condition, data were collected from 126 children, 71 of whom were excluded for one or more of the following reasons: abnormal developmental issues ($N= 9$), failure to calibrate ($N=26$), and less than 75\% exposure to English ($N=36$). The final sample consisted of 26 1-1.5 year olds (13 girls), 25 1.5-2 year olds (11 girls), 15 2-2.5 year olds (4 girls).
+
+\subsubsection{Stimuli, Design, and Procedure}
+
+Experimental stimuli were identical to those in Experiment 1, except that the identities of the novel toys were changed and new videos were recorded. In addition, Novel and ME test trials were updated to reflect the novel objects used in Experiment 2. The procedure, including the order of the trials, was identical.
+
+\subsection{Results}
+
+***No change in training trials!!! Salience is getting massively overwhelmed by the face, and by gaze-following.
+***Huge effect on test trials, but age-independent. Kids definitely don't seem to be *unlearning* salience weights
+
+\begin{figure*}[!t]
+	\center{\includegraphics[width=\textwidth]{figures/exp1_2_train_test.pdf}}
+	\caption{\label{fig:design}.}
+\end{figure*}
+
+
+\begin{table}[!ht]
+\begin{center} 
+\caption{Predicting Learning of Novel Words.} 
+\label{tab:model_table} 
+\vskip 0.12in
+\begin{tabular}{l r r r} 
+\hline
+Predictor  &  Estimate (SE) & \emph{t}-value & Significance\\
+\hline
+Intercept  & -.15 (.48) & -.31 & $p = .75$\\
+Age (yrs) & .71 (.23) &  3.11 & $p < .01$\\
+Salient  & .86 (.47) & 1.82 & $p = .07$\\
+NonSalient  & -.89 (.37) & -2.40 & $p < .05$\\
+ME & -.46 (.36) & -1.27 & $p =.20$\\
+Familiar & .23 (.38) & .596 & $p = .55$\\
+Learining & 1.08 (.46) & 2.35 & $p < .05$\\
+Sal*ME & -2.01 (.60) & -3.37 & $p < .001$\\
+NonSal*ME  & 1.67 (.54) & 3.07 & $p < .01$\\
+Salient*Fam & -.49 (.65) & -.76 & $p = .45$\\
+NonSal*Fam  & 1.35 (.57) & 2.37 & $p < .05$\\
+Salient*Learn & -.15 (.83) & -1.85 & $p = .85$\\
+NonSal*Learn  & .77 (.65) & 1.20 & $p = .23$\\
+\hline
+\end{tabular} 
+\end{center} 
+\end{table}
+
+
+\subsection{Discussion}
+
+\section{Conclusion}
+
+Main ideas: face is relevant, attended to, and used to find the target. The reason why could change over development (e.g. face itself could be salient), but either way ``social cues'' get used.
+
+Salience definitely matters, but mostly at test. Could be a cue-weighting model in which once the face is gone the salience cue gets high weight. But something about cue weighting seems wrong based on learning trial behavior. Unclear how to predict developmental differences unless cues are not normalized. Also, in general, this kind of model really misses the inherent temporal aspects of word learning.
+
+Salience could still be used in the absence of social information for either smart or dumb reasons, and might end up being adaptive. But it seems pretty clear that we're not seeing a re-weighting across development of these two cues.
+
+Seems like what we really want to pay attention to are memory, attentional control, and timing. Probably all of these are developing?
+
+Maybe the two timescales idea \cite{Frank2009a,McMurray2012} is the right way to think about this kind of thing. Performing above competence? 
+
+\section{Acknowledgments}
+
+We are grateful to Janelle Klaas for collecting the data, and to  all of the members of the Language and Cognition Lab for their feedback on this project. In addition, we thank the parents, children, and staff at the San Jose Children's Discovery Museum for supporting us in collecting developmental data. This work was supported by a NIH NRSA F32HD075577 to DY as well as grants from the Merck Scholars Foundation and the Stanford Center Health Research Initiative to MCF.
+
+\newpage
+
+\bibliographystyle{apacite}
+
+\setlength{\bibleftmargin}{.125in}
+\setlength{\bibindent}{-\bibleftmargin}
+
+\bibliography{library11}
+
+
+\end{document}
