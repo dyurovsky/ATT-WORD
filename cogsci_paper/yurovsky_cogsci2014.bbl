@@ -135,6 +135,37 @@ Brandone, A\BPBI C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Brooks%
+\ \BBA {} Meltzoff%
+}{%
+Brooks%
+\ \BBA {} Meltzoff%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+Brooks2008}
+\APACinsertmetastar {%
+Brooks2008}%
+\begin{APACrefauthors}%
+Brooks, R.%
+\BCBT {}\ \BBA {} Meltzoff, A\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Infant gaze following and pointing predict accelerated
+  vocabulary growth through two years of age: a longitudinal, growth curve
+  modeling study}} {{Infant gaze following and pointing predict accelerated
+  vocabulary growth through two years of age: a longitudinal, growth curve
+  modeling study}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Child Language}{35}{}{207--220}.
+\newblock
+\begin{APACrefDOI} \doi{10.1017/S030500090700829X} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Bruner%
 }{%
 Bruner%
@@ -645,6 +676,33 @@ Quine, W\BPBI V\BPBI O.%
 \APACrefbtitle {{Word and Object}} {{Word and Object}}\ (\BVOL~22).
 \newblock
 \begin{APACrefDOI} \doi{10.2307/2104619} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Seidenberg%
+\ \BBA {} MacDonald%
+}{%
+Seidenberg%
+\ \BBA {} MacDonald%
+}{%
+{\protect \APACyear {1999}}%
+}]{%
+Seidenberg1999}
+\APACinsertmetastar {%
+Seidenberg1999}%
+\begin{APACrefauthors}%
+Seidenberg, M\BPBI S.%
+\BCBT {}\ \BBA {} MacDonald, M\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1999}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A probabilistic constraints approach to language
+  acquisition and processing} {A probabilistic constraints approach to language
+  acquisition and processing}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive Science}{23}{4}{569--588}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
