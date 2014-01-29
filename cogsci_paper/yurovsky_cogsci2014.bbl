@@ -1,83 +1,6 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
-Baldwin%
-}{%
-Baldwin%
-}{%
-{\protect \APACyear {1991}}%
-}]{%
-Baldwin1991}
-\APACinsertmetastar {%
-Baldwin1991}%
-\begin{APACrefauthors}%
-Baldwin, D\BPBI A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1991}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Infants' contribution to the achievement of joint
-  reference}} {{Infants' contribution to the achievement of joint
-  reference}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Child Development}{62}{}{875--890}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Bergelson%
-\ \BBA {} Swingley%
-}{%
-Bergelson%
-\ \BBA {} Swingley%
-}{%
-{\protect \APACyear {2012}}%
-}]{%
-Bergelson2012}
-\APACinsertmetastar {%
-Bergelson2012}%
-\begin{APACrefauthors}%
-Bergelson, E.%
-\BCBT {}\ \BBA {} Swingley, D.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2012}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{At 6-9 months, human infants know the meanings of many
-  common nouns}} {{At 6-9 months, human infants know the meanings of many
-  common nouns}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Proceedings of the National Academy of
-  Sciences}{109}{}{3253--3258}.
-\newblock
-\begin{APACrefDOI} \doi{10.1073/pnas.1113380109} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Bloom%
-}{%
-Bloom%
-}{%
-{\protect \APACyear {2000}}%
-}]{%
-Bloom2000}
-\APACinsertmetastar {%
-Bloom2000}%
-\begin{APACrefauthors}%
-Bloom, P.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2000}.
-\newblock
-\APACrefbtitle {How children learn the meanings of words} {How children learn
-  the meanings of words}.
-\newblock
-\APACaddressPublisher{}{Cambridge: MA. MIT Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Bloom%
 \ \BBA {} Markson%
 }{%
@@ -101,37 +24,6 @@ Bloom, P.%
   underlying word learning.}}{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Trends in Cognitive Sciences}{2}{}{67--73}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Brandone%
-, Pence%
-, Golinkoff%
-\BCBL {}\ \BBA {} Hirsh-Pasek%
-}{%
-Brandone%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2007}}%
-}]{%
-Brandone2007}
-\APACinsertmetastar {%
-Brandone2007}%
-\begin{APACrefauthors}%
-Brandone, A\BPBI C.%
-, Pence, K\BPBI L.%
-, Golinkoff, R\BPBI M.%
-\BCBL {}\ \BBA {} Hirsh-Pasek, K.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2007}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Action Speaks Louder Than Words: Young Children
-  Differentially Weight Perceptual, Social, and Linguistic Cues to Learn
-  Verbs}} {{Action Speaks Louder Than Words: Young Children Differentially
-  Weight Perceptual, Social, and Linguistic Cues to Learn Verbs}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Child Development}{78}{}{1322 -- 1342}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -189,37 +81,6 @@ Bruner, J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Clark%
-, Schreuder%
-\BCBL {}\ \BBA {} Buttrick%
-}{%
-Clark%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {1983}}%
-}]{%
-Clark1983}
-\APACinsertmetastar {%
-Clark1983}%
-\begin{APACrefauthors}%
-Clark, H\BPBI H.%
-, Schreuder, R.%
-\BCBL {}\ \BBA {} Buttrick, S.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1983}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Common ground at the understanding of demonstrative
-  reference}} {{Common ground at the understanding of demonstrative
-  reference}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Verbal Learning and Verbal
-  Behavior}{22}{}{245--258}.
-\newblock
-\begin{APACrefDOI} \doi{10.1016/S0022-5371(83)90189-5} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 D'Entremont%
 , Hains%
 \BCBL {}\ \BBA {} Muir%
@@ -245,6 +106,33 @@ D'Entremont, B.%
   6-Month-Olds}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Infant Behavior and Development}{20}{}{569--572}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ernst%
+\ \BBA {} Banks%
+}{%
+Ernst%
+\ \BBA {} Banks%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+Ernst2002}
+\APACinsertmetastar {%
+Ernst2002}%
+\begin{APACrefauthors}%
+Ernst, M\BPBI O.%
+\BCBT {}\ \BBA {} Banks, M\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Humans integrate visual and haptic information in a
+  statistically optimal fashion} {Humans integrate visual and haptic
+  information in a statistically optimal fashion}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature}{415}{6870}{429--433}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -305,6 +193,35 @@ Frank, M\BPBI C.%
   model early cross-situational word learning}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Psychological Science}{20}{}{578--585}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Frank%
+, Tenenbaum%
+\BCBL {}\ \BBA {} Fernald%
+}{%
+Frank%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+Frank2013a}
+\APACinsertmetastar {%
+Frank2013a}%
+\begin{APACrefauthors}%
+Frank, M\BPBI C.%
+, Tenenbaum, J\BPBI B.%
+\BCBL {}\ \BBA {} Fernald, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Social and discourse contributions to the determination
+  of reference in cross-situational word learning} {Social and discourse
+  contributions to the determination of reference in cross-situational word
+  learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Language Learning and Development}{9}{1}{1--24}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -394,32 +311,30 @@ Gogate, L\BPBI J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Grassmann%
-\ \BBA {} Tomasello%
+Golinkoff%
+\ \BBA {} Hirsh-Pasek%
 }{%
-Grassmann%
-\ \BBA {} Tomasello%
+Golinkoff%
+\ \BBA {} Hirsh-Pasek%
 }{%
-{\protect \APACyear {2010}}%
+{\protect \APACyear {2006}}%
 }]{%
-Grassmann2010}
+Golinkoff2006}
 \APACinsertmetastar {%
-Grassmann2010}%
+Golinkoff2006}%
 \begin{APACrefauthors}%
-Grassmann, S.%
-\BCBT {}\ \BBA {} Tomasello, M.%
+Golinkoff, R\BPBI M.%
+\BCBT {}\ \BBA {} Hirsh-Pasek, K.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2010}{}{}.
+\APACrefYearMonthDay{2006}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Young children follow pointing over words in
-  interpreting acts of reference}} {{Young children follow pointing over words
-  in interpreting acts of reference}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {{Baby Wordsmith: From Associationist to Social
+  Sophisticate}} {{Baby Wordsmith: From Associationist to Social
+  Sophisticate}}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Developmental Science}{13}{}{252--263}.
-\newblock
-\begin{APACrefDOI} \doi{10.1111/j.1467-7687.2009.00871.x} \end{APACrefDOI}
+\APACjournalVolNumPages{Psychological Science}{15}{}{30--34}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -507,36 +422,6 @@ Jaeger, T\BPBI F.%
 \APACjournalVolNumPages{Journal of Memory and Language}{59}{}{434--446}.
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.jml.2007.11.007} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Kov\'{a}cs%
-, T\'{e}gl\'{a}s%
-\BCBL {}\ \BBA {} Endress%
-}{%
-Kov\'{a}cs%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2010}}%
-}]{%
-Kovacs2010}
-\APACinsertmetastar {%
-Kovacs2010}%
-\begin{APACrefauthors}%
-Kov\'{a}cs, A\BPBI M.%
-, T\'{e}gl\'{a}s, E.%
-\BCBL {}\ \BBA {} Endress, A\BPBI D.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2010}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{The social sense: susceptibility to others' beliefs in
-  human infants and adults.}} {{The social sense: susceptibility to others'
-  beliefs in human infants and adults.}}{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Science}{330}{}{1830--1834}.
-\newblock
-\begin{APACrefDOI} \doi{10.1126/science.1190792} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -657,28 +542,6 @@ Pruden, S\BPBI M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Quine%
-}{%
-Quine%
-}{%
-{\protect \APACyear {1960}}%
-}]{%
-Quine1960}
-\APACinsertmetastar {%
-Quine1960}%
-\begin{APACrefauthors}%
-Quine, W\BPBI V\BPBI O.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{1960}.
-\newblock
-\APACrefbtitle {{Word and Object}} {{Word and Object}}\ (\BVOL~22).
-\newblock
-\begin{APACrefDOI} \doi{10.2307/2104619} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Seidenberg%
 \ \BBA {} MacDonald%
 }{%
@@ -764,31 +627,32 @@ Smith, L\BPBI B.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Tincoff%
-\ \BBA {} Jusczyk%
+Vouloumanos%
+, Onishi%
+\BCBL {}\ \BBA {} Pogue%
 }{%
-Tincoff%
-\ \BBA {} Jusczyk%
-}{%
-{\protect \APACyear {1999}}%
+Vouloumanos%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
 }]{%
-Tincoff1999}
+Vouloumanos2012}
 \APACinsertmetastar {%
-Tincoff1999}%
+Vouloumanos2012}%
 \begin{APACrefauthors}%
-Tincoff, R.%
-\BCBT {}\ \BBA {} Jusczyk, P\BPBI W.%
+Vouloumanos, A.%
+, Onishi, K\BPBI H.%
+\BCBL {}\ \BBA {} Pogue, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{1999}{}{}.
+\APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {{Some Beginnings of Word Comprehension in 6-Month-Olds}}
-  {{Some Beginnings of Word Comprehension in 6-Month-Olds}}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Twelve-month-old infants recognize that speech can
+  communicate unobservable intentions} {Twelve-month-old infants recognize that
+  speech can communicate unobservable intentions}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Psychological Science}{10}{}{172--175}.
-\newblock
-\begin{APACrefDOI} \doi{10.1111/1467-9280.00127} \end{APACrefDOI}
+\APACjournalVolNumPages{Proceedings of the National Academy of
+  Sciences}{109}{32}{12933--12937}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
