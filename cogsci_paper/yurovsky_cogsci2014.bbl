@@ -398,6 +398,29 @@ Houston-Price, C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Jacobs%
+}{%
+Jacobs%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+Jacobs2002}
+\APACinsertmetastar {%
+Jacobs2002}%
+\begin{APACrefauthors}%
+Jacobs, R\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {What determines visual cue reliability?} {What
+  determines visual cue reliability?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Trends in Cognitive Sciences}{6}{8}{345--350}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Jaeger%
 }{%
 Jaeger%
@@ -542,33 +565,6 @@ Pruden, S\BPBI M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Seidenberg%
-\ \BBA {} MacDonald%
-}{%
-Seidenberg%
-\ \BBA {} MacDonald%
-}{%
-{\protect \APACyear {1999}}%
-}]{%
-Seidenberg1999}
-\APACinsertmetastar {%
-Seidenberg1999}%
-\begin{APACrefauthors}%
-Seidenberg, M\BPBI S.%
-\BCBT {}\ \BBA {} MacDonald, M\BPBI C.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1999}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {A probabilistic constraints approach to language
-  acquisition and processing} {A probabilistic constraints approach to language
-  acquisition and processing}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Cognitive Science}{23}{4}{569--588}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Senju%
 , Csibra%
 \BCBL {}\ \BBA {} Johnson%
@@ -704,6 +700,35 @@ Waxman, S\BPBI R.%
   associations}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Trends in Cognitive Science}{13}{}{258--263}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Yu%
+\ \BBA {} Smith%
+}{%
+Yu%
+\ \BBA {} Smith%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+Yu2012b}
+\APACinsertmetastar {%
+Yu2012b}%
+\begin{APACrefauthors}%
+Yu, C.%
+\BCBT {}\ \BBA {} Smith, L\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{Modeling cross-situational word-referent learning:
+  Prior questions.}} {{Modeling cross-situational word-referent learning: Prior
+  questions.}}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Review}{119}{}{21--39}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/a0026182} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
