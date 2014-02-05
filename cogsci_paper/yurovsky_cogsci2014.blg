@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: yurovsky_cogsci2014.aux
-The style file: apacite.bst
+The style file: myapacite.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
 Reallocated glb_str_end (elt_size=4) to 20 items from 10.
@@ -11,45 +11,50 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: library11.bib
+Repeated entry---line 13657 of file library11.bib
+ : %@incollection{Yurovsky2013c
+ :                             ,
+I'm skipping whatever remains of this entry
 apacite.bst [2012/02/25 v6.01 APA bibliography style]
-You've used 26 entries,
-            6735 wiz_defined-function locations,
-            1418 strings with 15047 characters,
-and the built_in function-call counts, 52847 in all, are:
-= -- 6556
-> -- 437
-< -- 2683
-+ -- 2845
-- -- 52
-* -- 3486
-:= -- 9968
-add.period$ -- 106
-call.type$ -- 26
-change.case$ -- 443
+You've used 22 entries,
+            6683 wiz_defined-function locations,
+            1389 strings with 14442 characters,
+and the built_in function-call counts, 44814 in all, are:
+= -- 5543
+> -- 367
+< -- 2304
++ -- 2437
+- -- 44
+* -- 2985
+:= -- 8425
+add.period$ -- 90
+call.type$ -- 22
+change.case$ -- 375
 chr.to.int$ -- 0
-cite$ -- 52
-duplicate$ -- 1359
-empty$ -- 1956
-format.name$ -- 727
-if$ -- 9821
+cite$ -- 44
+duplicate$ -- 1140
+empty$ -- 1653
+format.name$ -- 607
+if$ -- 8298
 int.to.chr$ -- 0
-int.to.str$ -- 52
+int.to.str$ -- 44
 missing$ -- 0
-newline$ -- 673
-num.names$ -- 210
-pop$ -- 710
+newline$ -- 568
+num.names$ -- 178
+pop$ -- 583
 preamble$ -- 1
-purify$ -- 104
+purify$ -- 88
 quote$ -- 0
-skip$ -- 3371
+skip$ -- 2876
 stack$ -- 0
-substring$ -- 3112
-swap$ -- 778
-text.length$ -- 57
+substring$ -- 2666
+swap$ -- 660
+text.length$ -- 49
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2144
+type$ -- 1824
 warning$ -- 0
-while$ -- 258
+while$ -- 218
 width$ -- 0
-write$ -- 859
+write$ -- 724
+(There was 1 error message)

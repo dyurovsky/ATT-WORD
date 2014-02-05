@@ -58,29 +58,6 @@ Brooks, R.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Bruner%
-}{%
-Bruner%
-}{%
-{\protect \APACyear {1983}}%
-}]{%
-Bruner1983}
-\APACinsertmetastar {%
-Bruner1983}%
-\begin{APACrefauthors}%
-Bruner, J.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{1983}.
-\newblock
-\APACrefbtitle {Child’s Talk: {L}earning to Use Language} {Child’s talk:
-  {L}earning to use language}.
-\newblock
-\APACaddressPublisher{}{Oxford: Oxford University Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 D'Entremont%
 , Hains%
 \BCBL {}\ \BBA {} Muir%
@@ -133,66 +110,6 @@ Ernst, M\BPBI O.%
   information in a statistically optimal fashion}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Nature}{415}{6870}{429--433}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Fernald%
-, Pinto%
-, Swingley%
-, Weinberg%
-\BCBL {}\ \BBA {} McRoberts%
-}{%
-Fernald%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {1998}}%
-}]{%
-Fernald1998}
-\APACinsertmetastar {%
-Fernald1998}%
-\begin{APACrefauthors}%
-Fernald, A.%
-, Pinto, J\BPBI P.%
-, Swingley, D.%
-, Weinberg, A.%
-\BCBL {}\ \BBA {} McRoberts, G\BPBI W.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1998}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Rapid gains in speed of verbal processing by infants in
-  the 2nd year} {Rapid gains in speed of verbal processing by infants in the
-  2nd year}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Psychological Science}{9}{}{228-231}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Frank%
-, Goodman%
-\BCBL {}\ \BBA {} Tenenbaum%
-}{%
-Frank%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2009}}%
-}]{%
-Frank2009a}
-\APACinsertmetastar {%
-Frank2009a}%
-\begin{APACrefauthors}%
-Frank, M\BPBI C.%
-, Goodman, N.%
-\BCBL {}\ \BBA {} Tenenbaum, J.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2009}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{Using speakers' referential intentions to model early
-  cross-situational word learning}} {{Using speakers' referential intentions to
-  model early cross-situational word learning}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Psychological Science}{20}{}{578--585}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -505,36 +422,6 @@ Moore, C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Morgante%
-, Zolfaghari%
-\BCBL {}\ \BBA {} Johnson%
-}{%
-Morgante%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2011}}%
-}]{%
-Morgante2011}
-\APACinsertmetastar {%
-Morgante2011}%
-\begin{APACrefauthors}%
-Morgante, J\BPBI D.%
-, Zolfaghari, R.%
-\BCBL {}\ \BBA {} Johnson, S\BPBI P.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2011}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {{A Critical Test of Temporal and Spatial Accuracy of the
-  Tobii T60XL Eye Tracker}} {{A Critical Test of Temporal and Spatial Accuracy
-  of the Tobii T60XL Eye Tracker}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Infancy}{}{}{1--24}.
-\newblock
-\begin{APACrefDOI} \doi{10.1111/j.1532-7078.2011.00089.x} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Pruden%
 , Hirsh-Pasek%
 , Golinkoff%
@@ -676,33 +563,6 @@ Vygotsky, L.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Waxman%
-\ \BBA {} Gelman%
-}{%
-Waxman%
-\ \BBA {} Gelman%
-}{%
-{\protect \APACyear {2009}}%
-}]{%
-Waxman2009}
-\APACinsertmetastar {%
-Waxman2009}%
-\begin{APACrefauthors}%
-Waxman, S\BPBI R.%
-\BCBT {}\ \BBA {} Gelman, S\BPBI A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2009}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Early word-learning entails reference, not merely
-  associations} {Early word-learning entails reference, not merely
-  associations}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Trends in Cognitive Science}{13}{}{258--263}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Yu%
 \ \BBA {} Smith%
 }{%
@@ -729,6 +589,35 @@ Yu, C.%
 \APACjournalVolNumPages{Psychological Review}{119}{}{21--39}.
 \newblock
 \begin{APACrefDOI} \doi{10.1037/a0026182} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Yurovsky%
+, Wade%
+\BCBL {}\ \BBA {} Frank%
+}{%
+Yurovsky%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+Yurovsky2013c}
+\APACinsertmetastar {%
+Yurovsky2013c}%
+\begin{APACrefauthors}%
+Yurovsky, D.%
+, Wade, A.%
+\BCBL {}\ \BBA {} Frank, M\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Online Processing of Speech and Social Information in
+  Early Word Learning} {Online processing of speech and social information in
+  early word learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proceedings of the 35th Annual Conference of the
+  Cognitive Science Society}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
