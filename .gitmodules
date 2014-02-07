@@ -1,0 +1,3 @@
+[submodule "Ranalysis"]
+	path = Ranalysis
+	url = https://github.com/langcog/Ranalysis

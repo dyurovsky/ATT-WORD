@@ -11,50 +11,45 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: library11.bib
-Repeated entry---line 13657 of file library11.bib
- : %@incollection{Yurovsky2013c
- :                             ,
-I'm skipping whatever remains of this entry
 apacite.bst [2012/02/25 v6.01 APA bibliography style]
 You've used 22 entries,
             6683 wiz_defined-function locations,
-            1389 strings with 14442 characters,
-and the built_in function-call counts, 44814 in all, are:
-= -- 5543
-> -- 367
-< -- 2304
-+ -- 2437
+            1392 strings with 14548 characters,
+and the built_in function-call counts, 45571 in all, are:
+= -- 5665
+> -- 375
+< -- 2316
++ -- 2463
 - -- 44
-* -- 2985
-:= -- 8425
-add.period$ -- 90
+* -- 3021
+:= -- 8497
+add.period$ -- 92
 call.type$ -- 22
-change.case$ -- 375
+change.case$ -- 376
 chr.to.int$ -- 0
 cite$ -- 44
-duplicate$ -- 1140
-empty$ -- 1653
-format.name$ -- 607
-if$ -- 8298
+duplicate$ -- 1175
+empty$ -- 1678
+format.name$ -- 619
+if$ -- 8462
 int.to.chr$ -- 0
 int.to.str$ -- 44
 missing$ -- 0
-newline$ -- 568
-num.names$ -- 178
+newline$ -- 570
+num.names$ -- 180
 pop$ -- 583
 preamble$ -- 1
 purify$ -- 88
 quote$ -- 0
-skip$ -- 2876
+skip$ -- 2957
 stack$ -- 0
-substring$ -- 2666
-swap$ -- 660
-text.length$ -- 49
+substring$ -- 2715
+swap$ -- 685
+text.length$ -- 56
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1824
+type$ -- 1888
 warning$ -- 0
-while$ -- 218
+while$ -- 228
 width$ -- 0
-write$ -- 724
-(There was 1 error message)
+write$ -- 726

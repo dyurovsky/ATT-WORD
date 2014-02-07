@@ -616,8 +616,12 @@ Yurovsky, D.%
   Early Word Learning} {Online processing of speech and social information in
   early word learning}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Proceedings of the 35th Annual Conference of the
-  Cognitive Science Society}{}{}{}.
+\BIn{} M.~Knauff, M.~Pauen, N.~Sebanz\BCBL {}\ \BBA {} I.~Wachsmuth\ (\BEDS),
+  \APACrefbtitle {Proceedings of the 35th Annual Conference of the Cognitive
+  Science Society} {Proceedings of the 35th annual conference of the cognitive
+  science society}\ (\BPGS\ 1641--1646).
+\newblock
+\APACaddressPublisher{}{Austin, TX: Cognitive Science Society}.
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
