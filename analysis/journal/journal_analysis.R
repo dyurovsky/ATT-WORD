@@ -45,12 +45,15 @@ data <- rbind(sal.data,nonsal.data,balanced.data) %>%
     age.grp = split.ages(age)) %>%
   filter(age >= 1)
 
+
+## TIMECOURSE GRAPHS
+#source('timecourse_graphs.R')
+
 ###############################################################################
 ############################# SPLIT TRAIN AND TEST ############################
 ###############################################################################
 
 #summarize across individual trials
-#dplyr/data.table functions make this much faster
 test.data <- data %>% 
   filter(trial.type != "Learning", time.step >=TEST_START, 
          time.step <= TEST_END) %>%
