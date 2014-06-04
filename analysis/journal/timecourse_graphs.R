@@ -56,9 +56,10 @@ names(e1.timecourse.train)[5] <- "prop"
 ##SPLIT RT HIST
 quartz(width=12,height=5,title = "Switch RTs")
 
-ggplot(e1.rt.split,aes(x = rt, color=trial.type)) + 
+ggplot(e1.rt.split,aes(x = rt, fill=trial.type)) + 
   facet_grid(split.type ~ age.grp) +
-  geom_density()
+  geom_density(alpha=.5) +
+  scale_fill_manual(values=man_cols[1:3])
   
 
 ##SPLIT RT HIST
@@ -66,7 +67,7 @@ quartz(width=12,height=5,title = "Switch RTs")
 
 ggplot(e1.rt.split,aes(x = rt, fill=trial.type)) + 
   facet_grid(split.type ~ age.grp) +
-  geom_histogram(binwidth=100)
+  geom_histogram(binwidth=100) 
 
 
 ##SPLIT GRAPH
