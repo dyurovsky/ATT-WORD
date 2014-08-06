@@ -25,9 +25,11 @@ quartz(width=12,height=5,title = "Test Looking")
 ggplot(e1.split.timecourse, aes(x=time.step, y=roll.mean, 
                                colour=trial.type, fill = trial.type,
                                linetype=split.type,))+
-  facet_wrap( ~ age.grp) +
+  facet_grid(trial.type ~ age.grp) +
   geom_line(size=.8) +
   geom_hline(aes(yintercept=.5),lty=2)+
+  geom_ribbon(aes(ymin=min,ymax=max),fill="gray",alpha=.2, 
+              colour=NA) +
   scale_x_continuous(limits = c(0,TIMECOURSE_END),
                      breaks=seq(-1,TIMECOURSE_END),
                      name = "Time(s)") + 
@@ -80,12 +82,14 @@ ggplot(e1and2.split.rt,aes(x = rt,color=exp,fill=exp)) +
 
 ##SPLIT GRAPH
 quartz(width=12,height=6,title = "Test Looking")
-ggplot(filter(e1and2.split.timecourse, trial.type!="Familiar"), 
+ggplot(filter(e1and2.split.timecourse, trial.type=="Novel"), 
        aes(x=time.step, y=prop, colour=trial.type, fill = trial.type,
                                 linetype=split.type))+
   facet_grid(exp ~ age.grp) +
   geom_line(size=.8) +
   geom_hline(aes(yintercept=.5),lty=2)+
+  geom_ribbon(aes(ymin=min,ymax=max),fill="gray",alpha=.2, 
+              colour=NA) +
   scale_x_continuous(limits = c(0,TIMECOURSE_END),
                      breaks=seq(-1,TIMECOURSE_END),
                      name = "Time(s)") + 
@@ -173,7 +177,7 @@ e1.timecourse.train <- data %>%
   summarise_each(funs(na.mean,sem),n)
 names(e1.timecourse.train)[5] <- "prop"
 
-##TRAIN GRAPH
+##E1 TRAIN GRAPH
 quartz(width=10,height=3,title = "Train Looking")
 ggplot(e1.timecourse.train, aes(x=time.step, y=prop, 
                                 colour=age.grp, fill = age.grp))+
@@ -195,3 +199,28 @@ ggplot(e1.timecourse.train, aes(x=time.step, y=prop,
                      values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1")) +
   scale_fill_manual(name = "Age Group",
                     values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1"))
+
+##E1 TEST GRAPH
+quartz(width=10,height=3,title = "Test Looking")
+ggplot(e1.timecourse.test, aes(x=time.step, y=prop, 
+                                colour=age.grp, fill = age.grp))+
+  facet_grid(~ trial.type) +
+  geom_ribbon(aes(ymin = prop-sem,
+                  ymax = prop+sem),
+              alpha = .3, linetype = 0) +
+  geom_line(size=.8) +
+  geom_vline(aes(xintercept=0),lty=2) +
+  geom_hline(aes(yintercept=.5),lty=2) +
+  scale_x_continuous(limits = c(-1,4),breaks=c(-1,0,1,2,3,4),
+                     name = "Time(s)") + 
+  scale_y_continuous(limits = c(0,1), breaks=c(0,.25,.5,.75,1),
+                     name = "Prop. Looks to Target") +
+  theme_bw(base_size=14) + #theme(legend.position=c(.5, .5),
+  #       legend.direction = "horizontal") +
+  guides(color = guide_legend(reverse = TRUE),
+         fill = guide_legend(reverse = TRUE)) +
+  scale_color_manual(name="Age Group",
+                     values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1")) +
+  scale_fill_manual(name = "Age Group",
+                    values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1"))
+
