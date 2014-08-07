@@ -20,8 +20,8 @@ ggplot(e1.split.rt,aes(x = rt)) +
   scale_y_continuous(breaks=NULL,
     name = "Proportion of Children Making their First Switch")
 
-##SPLIT GRAPH
-quartz(width=12,height=5,title = "Test Looking")
+##E1 SPLIT GRAPH
+quartz(width=12,height=6,title = "Test Looking")
 ggplot(e1.split.timecourse, aes(x=time.step, y=roll.mean, 
                                colour=trial.type, fill = trial.type,
                                linetype=split.type,))+
@@ -35,9 +35,11 @@ ggplot(e1.split.timecourse, aes(x=time.step, y=roll.mean,
                      name = "Time(s)") + 
   scale_y_continuous(limits = c(0,1), breaks=c(0,.25,.5,.75,1),
                      name = "Prop. Looks to Switch") +
-  theme_bw(base_size=14) + #+ theme(legend.position="none") +
+  theme_bw(base_size=14) + theme(legend.position=c(.055,.932)) +
+  guides(colour=FALSE,linetype=guide_legend(title=NULL)) +
   scale_color_manual(values=man_cols[1:3]) +
-  scale_fill_manual(values=man_cols[1:3])
+  scale_fill_manual(values=man_cols[1:3]) +
+  scale_linetype_discrete(name="Split Type")
 
 ##TEST GRAPH
 quartz(width=10,height=3,title = "Test Looking")
@@ -81,8 +83,8 @@ ggplot(e1and2.split.rt,aes(x = rt,color=exp,fill=exp)) +
 
 
 ##SPLIT GRAPH
-quartz(width=12,height=6,title = "Test Looking")
-ggplot(filter(e1and2.split.timecourse, trial.type=="Novel"), 
+quartz(width=6.5,height=6,title = "Test Looking")
+ggplot(filter(e1and2.split.timecourse, trial.type=="Familiar"), 
        aes(x=time.step, y=prop, colour=trial.type, fill = trial.type,
                                 linetype=split.type))+
   facet_grid(exp ~ age.grp) +
@@ -95,9 +97,10 @@ ggplot(filter(e1and2.split.timecourse, trial.type=="Novel"),
                      name = "Time(s)") + 
   scale_y_continuous(limits = c(0,1), breaks=c(0,.25,.5,.75,1),
                      name = "Prop. Looks to Switch") +
-  theme_bw(base_size=14) + #+ theme(legend.position="none") +
-  scale_color_manual(values=man_cols[1:2]) +
-  scale_fill_manual(values=man_cols[1:2])
+  theme_bw(base_size=14) + theme(legend.position=c(.11,.934)) +
+  scale_color_manual(values=man_cols[1]) +
+  scale_fill_manual(values=man_cols[1]) +
+  guides(colour=FALSE,linetype=guide_legend(title=NULL))
 
 e1and2.timecourse.test <- data %>%
   filter(trial.type != "Learning",
