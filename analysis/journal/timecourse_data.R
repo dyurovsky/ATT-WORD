@@ -9,7 +9,7 @@ TIMECOURSE_END <- 4
 e1.timecourse.data <- data %>%
   filter(exp == "Balanced",trial.type != "Learning",
          time.step <= TIMECOURSE_END, age.grp <4) %>%
-  mutate(age.grp = factor(age.grp),)
+  mutate(age.grp = factor(age.grp))
 
 # Subset to train
 e1.timecourse.train <- data %>%
@@ -18,7 +18,7 @@ e1.timecourse.train <- data %>%
   mutate(age.grp = factor(age.grp)) %>%
   group_by(age.grp,trial.type,time.step,trial.num,aoi) %>%
   summarise(n = n()) %>%
-  filter(aoi != "NA") %.%
+  filter(aoi != "NA") %>%
   mutate(n = n / sum(n)) %>%
   group_by(age.grp,trial.type,time.step,aoi,add=FALSE) %>%
   filter(aoi != "Other") %>%
@@ -27,12 +27,9 @@ e1.timecourse.train <- data %>%
 names(e1.timecourse.train)[5] <- "prop"
 
 # Do window averaging
-e1.timecourse.train <- mutate(e1.timecourse.train,
-                             roll.mean = rollapply(prop,6,FUN=na.mean, 
-                                                   partial=TRUE))
-e1.timecourse.train <- mutate(e1.timecourse.train,
-                             roll.sem = rollapply(sem,6,FUN=na.mean, 
-                                                  partial=TRUE))
+e1.timecourse.train %<>%
+  mutate(roll.mean = rollapply(prop,6,FUN=na.mean,partial=TRUE),
+         roll.sem = rollapply(sem,6,FUN=na.mean,partial=TRUE))
 
 
 # Compute timecourse for standard analysis
@@ -44,17 +41,14 @@ e1.timecourse.test <- e1.timecourse.data %>%
 names(e1.timecourse.test)[4] <- "prop"
 
 #Do window averaging
-e1.timecourse.test <- mutate(e1.timecourse.test,
-                             roll.mean = rollapply(prop,6,FUN=na.mean, 
-                                                   partial=TRUE))
-e1.timecourse.test <- mutate(e1.timecourse.test,
-                             roll.sem = rollapply(sem,6,FUN=na.mean, 
-                                                   partial=TRUE))
+e1.timecourse.test %<>%
+  mutate(roll.mean = rollapply(prop,6,FUN=na.mean,partial=TRUE),
+         roll.sem = rollapply(sem,6,FUN=na.mean,partial=TRUE))
 
 # Compute side of the screen Ps were on for each test trial
 e1.split.type <- e1.timecourse.data %>%
   filter(time.step == 0) %>%
-  mutate(split.type = aoi) %>%
+  rename(split.type = aoi) %>%
   select(subj,trial.type,trial.num,split.type)
 
 # Subset test data to just for split analysis
@@ -69,13 +63,15 @@ e1.split.timecourse <- e1.split.data %>%
               (sum(aoi=="Target")+sum(aoi=="Competitor"))) %>%
   summarise_each(funs(na.mean,sem),prop)
 names(e1.split.timecourse)[5] <- "prop"
-e1.split.timecourse[e1.split.timecourse$split.type=="Target","prop"] <- 
-  1 - e1.split.timecourse[e1.split.timecourse$split.type=="Target","prop"] 
 
-e1.split.timecourse <- e1.split.timecourse %>%
+e1.split.timecourse[e1.split.timecourse$split.type=="Target",]$prop <- 
+  1 - e1.split.timecourse[e1.split.timecourse$split.type=="Target",]$prop 
+
+e1.split.timecourse %<>%
   mutate(roll.mean = rollapply(prop,6,FUN=na.mean,partial=TRUE)) %>%
   group_by(age.grp,trial.type,time.step) %>%
-  mutate(max = max(roll.mean),min= min(roll.mean))
+  mutate(max = max(roll.mean),
+         min= min(roll.mean))
 
 e1.split.timecourse[with(e1.split.timecourse,
                              split.type=="Target" & min != roll.mean),
@@ -99,7 +95,7 @@ e1and2.timecourse.train <- data %>%
   mutate(age.grp = factor(age.grp)) %>%
   group_by(exp,age.grp,trial.type,time.step,trial.num,aoi) %>%
   summarise(n = n()) %>%
-  filter(aoi != "NA") %.%
+  filter(aoi != "NA") %>%
   mutate(n = n / sum(n)) %>%
   group_by(exp,age.grp,trial.type,time.step,aoi,add=FALSE) %>%
   filter(aoi != "Other") %>%
@@ -107,17 +103,12 @@ e1and2.timecourse.train <- data %>%
   group_by(age.grp,aoi,exp)
 names(e1and2.timecourse.train)[6] <- "prop"
 
-e1and2.timecourse.train <- mutate(e1and2.timecourse.train,
-                              roll.mean = rollapply(prop,6,FUN=na.mean, 
-                                                    partial=TRUE))
-e1and2.timecourse.train <- mutate(e1and2.timecourse.train,
-                              roll.sem = rollapply(sem,6,FUN=na.mean, 
-                                                   partial=TRUE))
+e1and2.timecourse.train %<>%
+  group_by(age.grp,aoi,add=FALSE) %>%
+  mutate(roll.mean = rollapply(prop,6,FUN=na.mean,partial=TRUE),
+         roll.sem = rollapply(sem,6,FUN=na.mean,partial=TRUE),
+         exp = factor(exp,levels=c("NonSalient","Balanced","Salient")))
 
-e1and2.timecourse.train$exp <- factor(e1and2.timecourse.train$exp,
-                                      levels=c("NonSalient",
-                                              "Balanced",
-                                              "Salient"))
 
 # Compute timecourse for standard analysis
 e1and2.timecourse.test <- e1and2.timecourse.data %>%
@@ -127,12 +118,9 @@ e1and2.timecourse.test <- e1and2.timecourse.data %>%
   summarise_each(funs(na.mean,sem),prop)
 names(e1and2.timecourse.test)[5] <- "prop"
 
-e1and2.timecourse.test <- mutate(e1and2.timecourse.test,
-                             roll.mean = rollapply(prop,6,FUN=na.mean, 
-                                                   partial=TRUE))
-e1and2.timecourse.test <- mutate(e1and2.timecourse.test,
-                             roll.sem = rollapply(sem,6,FUN=na.mean, 
-                                                  partial=TRUE))
+e1and2.timecourse.test %<>% 
+  mutate(roll.mean = rollapply(prop,6,FUN=na.mean,partial=TRUE),
+         roll.sem = rollapply(sem,6,FUN=na.mean,partial=TRUE))
 
 # Compute side of the screen Ps were on for each test trial
 e1and2.split.type <- e1and2.timecourse.data %>%
@@ -145,8 +133,6 @@ e1and2.split.data <- merge(e1and2.timecourse.data,e1and2.split.type) %>%
   filter(split.type == "Target" | split.type == "Competitor",
          time.step >= 0)
 
-
-
 # Compute timecourses for split analysis
 e1and2.split.timecourse <- e1and2.split.data %>%
   group_by(exp,age.grp,trial.type,split.type,time.step,trial.num) %>%
@@ -154,9 +140,8 @@ e1and2.split.timecourse <- e1and2.split.data %>%
               (sum(aoi=="Target")+sum(aoi=="Competitor"))) %>%
   summarise_each(funs(na.mean,sem),prop)
 names(e1and2.split.timecourse)[6] <- "prop"
-e1and2.split.timecourse[e1and2.split.timecourse$split.type=="Target","prop"] <- 
-  1 - e1and2.split.timecourse[e1and2.split.timecourse$split.type=="Target",
-                              "prop"] 
+e1and2.split.timecourse[e1and2.split.timecourse$split.type=="Target",]$prop <- 
+  1-e1and2.split.timecourse[e1and2.split.timecourse$split.type=="Target",]$prop 
 
 e1and2.split.timecourse <- e1and2.split.timecourse %>%
   mutate(roll.mean = rollapply(prop,6,FUN=na.mean,partial=TRUE)) %>%

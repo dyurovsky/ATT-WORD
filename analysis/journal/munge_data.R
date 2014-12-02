@@ -25,18 +25,15 @@ train.data <- data %>%
          time.step <= TRAIN_END) %>%
   group_by(exp,trial.type,age,age.grp,gender,subj,trial.num)%>%
   summarise(
-    Target = sum(aoi=="Target")/(sum(aoi!="NA")),
     Face = sum(aoi=="Face")/(sum(aoi!="NA")),
+    Target = sum(aoi=="Target")/(sum(aoi!="NA")),
     Competitor = sum(aoi=="Competitor")/(sum(aoi!="NA")),
     TD = sum(aoi=="Target")/(sum(aoi=="Target")+sum(aoi=="Competitor")))
 
 #summarize by subject
-train.data.subj <- summarise_each(train.data,funs(na.mean),(-trial.num))
-#melt down to a data.frame
-train.data.subj <- melt(as.data.frame(train.data.subj), 
-                        measure.vars = c("Face","Target","Competitor","TD"),
-                        variable.name='aoi',
-                        value.name='prop',na.rm=FALSE)
+train.data.subj <- train.data %>%
+  summarise_each(funs(na.mean),(-trial.num)) %>%
+  gather(aoi,prop,Face:TD)
 
 #aggregate by trial.type
 train.data.trial <- train.data.subj %>%
@@ -78,7 +75,7 @@ train.data.e1and2 <- train.data.trial %>%
   mutate(trial.type = aoi) %>%
   select(-aoi)
 
-train.data.e1and2.td <- train.data.e1and2 %.%
+train.data.e1and2.td <- train.data.e1and2 %>%
   filter(trial.type=="TD") %>%
   mutate(trial.type = "Learning")
 
@@ -112,20 +109,11 @@ lmer.data.e1$trial.type <- factor(lmer.data.e1$trial.type,
                                   levels=c("Novel","Learning","Familiar","ME"))
 
 #Both Experiments -- reshape so Familiar is a control variable for lmer
-lmer.data.e1and2 <- rbind(train.data.subj.e1and2.td,test.data.subj.e1and2)
-lmer.data.e1and2  <- reshape(lmer.data.e1and2,timevar="trial.type",
-                             idvar=c("exp","subj","age","age.grp","gender"),
-                             direction="wide")
-lmer.data.e1and2  <- reshape(lmer.data.e1and2,
-                             varying=c("prop.Learning","prop.Novel","prop.ME"),
-                             idvar=c("exp","subj","age","age.grp","gender"),
-                             ids = "trial.type",
-                             direction="long")
-rownames(lmer.data.e1and2) <- NULL
-names(lmer.data.e1and2)[6] <- "Familiar"
-names(lmer.data.e1and2)[7] <- "trial.type"
-lmer.data.e1and2$trial.type <- factor(lmer.data.e1and2$trial.type,
-                                      levels=c("Novel","Learning","ME"))
+lmer.data.e1and2 <- rbind(train.data.subj.e1and2.td,test.data.subj.e1and2) %>%
+  spread(trial.type,prop) %>%
+  gather(trial.type,prop,c(Learning,Novel,ME)) %>%
+  mutate(trial.type = factor(trial.type,levels=c("Novel","Learning","ME")))
+
 
 #Demographic data reported for Exps 1 and 2
 demo.data <- rbind(test.data.subj.e1,test.data.subj.e2) %>%

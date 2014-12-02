@@ -7,6 +7,8 @@ source('../helpers/useful.R')
 #load libraries for data manipulation and graphing
 library(directlabels)
 library(xtable)
+library(magrittr)
+library(tidyr)
 
 #splits ages into half-years
 split.ages <-function(x) {floor(x*2)/2}

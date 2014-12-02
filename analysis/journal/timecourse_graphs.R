@@ -2,7 +2,7 @@
 ################ FIGURE 2: LEARNING TRIAL TIMECOURSE IN EXP 1 #################
 ###############################################################################
 quartz(width=10,height=3,title = "Train Looking")
-ggplot(e1.timecourse.train, aes(x=time.step, y=prop, 
+p <- ggplot(e1.timecourse.train, aes(x=time.step, y=prop, 
                                 colour=age.grp, fill = age.grp))+
   facet_grid(~ aoi) +
   geom_ribbon(aes(ymin = roll.mean-roll.sem,
@@ -22,12 +22,13 @@ ggplot(e1.timecourse.train, aes(x=time.step, y=prop,
                      values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1")) +
   scale_fill_manual(name = "Age Group",
                     values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1"))
+print(p)
 
 ###############################################################################
 ################### FIGURE 3: TEST TRIAL TIMECOURSE IN EXP 1 ##################
 ###############################################################################
 quartz(width=10,height=3,title = "Test Looking")
-ggplot(filter(e1.timecourse.test,time.step==round(time.step,2)),
+p <- ggplot(filter(e1.timecourse.test,time.step==round(time.step,2)),
        aes(x=time.step, y=roll.mean, 
            colour=age.grp, fill = age.grp))+
   facet_grid(~ trial.type) +
@@ -48,12 +49,13 @@ ggplot(filter(e1.timecourse.test,time.step==round(time.step,2)),
                      values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1")) +
   scale_fill_manual(name = "Age Group",
                     values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1"))
+print(p)
 
 ###############################################################################
 ################## FIGURE 4: ONSET-CONTINGENT PLOT FOR EXP 1 ##################
 ###############################################################################
 quartz(width=12,height=6,title = "Test Looking")
-ggplot(e1.split.timecourse, aes(x=time.step, y=roll.mean, 
+p <- ggplot(e1.split.timecourse, aes(x=time.step, y=roll.mean, 
                                colour=trial.type, fill = trial.type,
                                linetype=split.type,))+
   facet_grid(trial.type ~ age.grp) +
@@ -71,12 +73,13 @@ ggplot(e1.split.timecourse, aes(x=time.step, y=roll.mean,
   scale_color_manual(values=man_cols[1:3]) +
   scale_fill_manual(values=man_cols[1:3]) +
   scale_linetype_discrete(name="Split Type")
+print(p)
 
 ###############################################################################
 ################ FIGURE 7: LEARNING TRIAL TIMECOURSE IN EXP 2 #################
 ###############################################################################
 quartz(width=9,height=6.5,title = "Train Looking")
-ggplot(e1and2.timecourse.train, aes(x=time.step, y=prop, 
+p <- ggplot(e1and2.timecourse.train, aes(x=time.step, y=prop, 
                                     colour=age.grp, fill = age.grp))+
   facet_grid(exp~ aoi) +
   geom_ribbon(aes(ymin = roll.mean-roll.sem,
@@ -95,12 +98,13 @@ ggplot(e1and2.timecourse.train, aes(x=time.step, y=prop,
                      breaks=c("2","1.5","1")) +
   scale_fill_manual(name="Age Group",values=man_cols[1:3],
                     breaks=c("2","1.5","1"))
+print(p)
 
 ###############################################################################
 ################### FIGURE 8: TEST TRIAL TIMECOURSE IN EXP 1 ##################
 ###############################################################################
 quartz(width=9,height=7,title = "Test Looking")
-ggplot(e1and2.timecourse.test, aes(x=time.step, y=prop, 
+p <- ggplot(e1and2.timecourse.test, aes(x=time.step, y=prop, 
                                    colour=age.grp, fill = age.grp))+
   facet_grid(exp ~ trial.type) +
   geom_ribbon(aes(ymin = roll.mean-roll.sem,
@@ -120,13 +124,13 @@ ggplot(e1and2.timecourse.test, aes(x=time.step, y=prop,
                      breaks=c("2","1.5","1")) +
   scale_fill_manual(name="Age Group",values=man_cols[1:3],
                     breaks=c("2","1.5","1"))
-
+print(p)
 
 ###############################################################################
 ################## FIGURE 9: ONSET-CONTINGENT PLOT FOR EXP 2 ##################
 ###############################################################################
-quartz(width=6.5,height=6,title = "Test Looking")
-ggplot(filter(e1and2.split.timecourse, trial.type=="Familiar"), 
+quartz(width=6.5,height=6.25,title = "Test Looking")
+p <- ggplot(filter(e1and2.split.timecourse, trial.type=="Familiar"), 
        aes(x=time.step, y=prop, colour=trial.type, fill = trial.type,
                                 linetype=split.type))+
   facet_grid(exp ~ age.grp) +
@@ -142,4 +146,8 @@ ggplot(filter(e1and2.split.timecourse, trial.type=="Familiar"),
   theme_bw(base_size=18) + theme(legend.position=c(.135,.9315)) +
   scale_color_manual(values=man_cols[1]) +
   scale_fill_manual(values=man_cols[1]) +
-  guides(colour=FALSE,linetype=guide_legend(title=NULL))
+  guides(colour=FALSE,linetype=guide_legend(title=NULL)) + 
+  ggtitle("Familiar Trials") + 
+  theme(title = element_text(vjust=1),
+        axis.title.x = element_text(vjust=-.25))
+print(p)

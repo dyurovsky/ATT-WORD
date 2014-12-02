@@ -1,16 +1,17 @@
 ###############################################################################
 ################################# T-STATISTICS ################################
 ###############################################################################
-ts <- aggregate(prop ~ trial.type + age.grp + exp, data=ttest.data,
-                FUN=na.mean)
+library(compute.es)
 
-#Make a table of t, df, and p-vals for all conditions
-ts$t <- aggregate(prop ~ trial.type + age.grp + exp, data=ttest.data,
-                  FUN=function(x) {t.test(x,mu=.5)}$statistic)$prop
-ts$df <- aggregate(prop ~ trial.type + age.grp + exp, data=ttest.data,
-                   FUN=function(x) {t.test(x,mu=.5)}$parameter)$prop
-ts$p.val <- aggregate(prop ~ trial.type + age.grp + exp, data=ttest.data,
-                      FUN=function(x) {t.test(x,mu=.5)}$p.value)$prop
+#Make a table of t, df, p-vals, and cohen's d for all conditions
+ts <- ttest.data %>%
+  group_by(exp,age.grp,trial.type) %>%
+  summarise( t = t.test(prop,mu=.5)$statistic,
+             df = t.test(prop,mu=.5)$parameter,
+             p.val = t.test(prop,mu=.5)$p.value,
+             sd = na.sd(prop),
+             prop = na.mean(prop)) %>%
+  mutate(d = abs(prop-.5)/sd)
 
 
 ###############################################################################
