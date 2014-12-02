@@ -7,11 +7,7 @@
 \usepackage[section]{placeins}
 
 \title{Beyond Na\"{i}ve Cue Combination: Salience and Social Cues in Early Word Learning}
-\author{Daniel Yurovsky and Michael C. Frank}
-\affiliation{Department of Psychology, Stanford University}
 \shorttitle{Developmental Cue Combination}
-\leftheader{Yurovsky \& Frank}
-
 
 \abstract{
 
@@ -30,30 +26,14 @@ Children learn their earliest words through social \emph{interaction}, but it is
 
 \keywords{Language acquisition, word learning, social cues, eye-tracking, cognitive development, attention}
 
-\authornote{Please address correspondence to: 
-
-\vspace{12 pt}
-Daniel Yurovsky
-
-Jordan Hall (Building 420)
-
-Stanford University
-
-450 Serra Mall
-
-Stanford, CA 94305
-
-\vspace{12 pt}
-Email: yurovsky@stanford.edu 
-
-\vspace{24 pt}
+\authornote{
 
 Word Count: 6030
-}
+
+\vspace{300 pt}}
 
 \begin{document}
 \maketitle
-
 
 How do children learn the meanings of their first words? A number of influential theories conceptualize young infants' primary learning mechanism as making associations between perceptual stimuli \cite{Piaget1952, Vygotsky1978}. On these kinds of accounts, infants learn the meanings of labels like ``ball'' and ``dog'' by mapping them onto salient objects in their learning environments \cite{Werker1998,Smith2000}. These accounts are appealing on grounds of parsimony: The mechanisms they require for the onset of word learning---perceptual orienting and associative mapping---are universally agreed to be in the repertoire of young infants (\citeNP<e.g.>{Fantz1964,Haith1980}; although \citeNP<c.f.>{Spelke1998}). In addition, the ecological context of language learning appears to support perceptually-driven learning. For instance, early child-directed naming events are characterized by multi-modal synchrony: mothers move the objects they label in temporal synchrony with the labels they speak \cite{Gogate2000}, and the degree of synchrony predicts successful word-object mapping for young infants \cite{Gogate2006}.\footnote{For convenience here---and reflecting the orientation of our work towards concrete noun learning---we refer to ``word-object mapping'' and ``word learning'' interchangeably. Of course, mapping is only a small part of the process of learning a word, which includes at least: learning a phonological form, mapping this form to a referent, inferring the meaning that licenses this reference and how it generalizes across instances, and retaining all of this information in memory for future use.}
 
@@ -161,14 +141,14 @@ Together, these descriptive analyses suggest that from the earliest age we measu
 	\caption{\label{fig:exp1_train} Proportion of children's looking the target toy, competitor toy, and the speaker's face during learning trials in Experiment 1, summarizing the developmental trends shown in Figure \ref{fig:exp1_train_spaghetti}. Children of all ages spent the majority of the learning trials looking at the speaker's face. Disengaging from the face and fixating the target increased across development. Error bars indicate 95\% confidence interval computed by non-parametric bootstrap.}
 \end{figure}
 
-Inspection of time course plots showed that children in all age groups were successful at attending to and following the speaker's social gaze during learning trials at all ages. Statistical analysis confirmed this impression: children of all ages spent more time looking at the target than at the competitor during learning trials (smallest $t(23)  = 3.20$, $p < .01$, $d =.65$) ; Figure~\ref{fig:exp1_train_test}). However, for all age groups, looks to both target and competitor made up the minority of children's dwell times. Instead, children in all age groups spent more than 50\% of their time attending to the speaker's face (Figure~\ref{fig:exp1_train}).\footnote{All data and code for analysis available at \small{\tt{http://github.com/dyurovsky/ATT-WORD}}.} 
+Inspection of time course plots showed that children in all age groups were successful at attending to and following the speaker's social gaze during learning trials at all ages. Statistical analysis confirmed this impression: children of all ages spent more time looking at the target than at the competitor during learning trials (smallest $t(23)  = 3.20$, $p < .01$; Figure~\ref{fig:exp1_train_test}). However, for all age groups, looks to both target and competitor made up the minority of children's dwell times. Instead, children in all age groups spent more than 50\% of their time attending to the speaker's face (Figure~\ref{fig:exp1_train}). 
 
 \begin{figure}[tb]
 	\center{\includegraphics[width=\textwidth]{figures/exp1_train_test.pdf}}
 	\caption{\label{fig:exp1_train_test} Proportion of time children fixated the correct target on each trial type in Experiment 1. Children improved on all measures across development. Each dot indicates one half-year age group and each line represents a 95\% confidence interval computed by non-parametric bootstrap. A proportion of .5 indicates chance performance.}
 \end{figure}	
 
-Similar analyses of test trials showed broad success on Familiar, Novel, and ME trials across development. The 1--1.5 year-olds trended towards significance on Familiar trials ($t(26)  = 1.65$, $p = .11$, $d = .32$), and were non-significantly in the correct direction on Novel and ME trials. At all other ages, children looked to the target at above-chance levels on all test trials (smallest $t(17)  = 2.10$, $p = .05$, $d = 1.16$). These analyses are consistent with previous work showing the emergence of success on ME trials from approximately 16-18 months \cite<e.g.>{Halberda2006, Bion2013}.
+Similar analyses of test trials showed broad success on Familiar, Novel, and ME trials across development. The 1--1.5 year-olds trended towards significance on Familiar trials ($t(26)  = 1.65$, $p = .11$), and were non-significantly in the correct direction on Novel and ME trials. At all other ages, children looked to the target at above-chance levels on all test trials (smallest $t(17)  = 2.10$, $p = .05$). These analyses are consistent with previous work showing the emergence of success on ME trials from approximately 16-18 months \cite<e.g.>{Halberda2006, Bion2013}.
 
 To quantify the change we observed across development, we fit a mixed effects logistic regression to the proportion of looking data during both learning and test \cite{Jaeger2008}. Our regression model predicted the proportion of looking to the target on each trial using and trial type (Learning, Familiar, Novel, ME) with Novel as the reference trial type. To make data from the learning phase comparable with those from the test phase, we computed the proportion looking to the target vs. the competitor object, excluding looks to the face.  This analysis revealed significant improvements in target looking across age ($\beta = .61$, $z = 4.03$, $p <.001$), as well as a significant effect of Learning as compared to Novel trials ($\beta = 1.18$, $z = 3.11$, $p <.01$). No other trial types were significantly different from the Novel baseline, and a model with an interaction between age and trial type was not a significantly better fit to the data. These statistical analyses together suggest that children were more successful at finding the correct target during learning trials, but that they improved similarly on all trial types across development, capturing the general developmental trends shown in Figure \ref{fig:exp1_train_test}.
 
@@ -228,7 +208,7 @@ The effect of salience on looking behavior is even clearer in the onset-continge
 
 \subsubsection{Statistical Analyses}
 
-In contrast to the prediction of the na\"{i}ve cue-combination account, children's looking behavior during learning trials was not significantly affected by the salience of the target and competitor (Figure~\ref{fig:exp1_2}, top). As in Experiment 1, children of all ages spent more time looking at the target than the competitor (smallest $t(14)  = 3.53$, $p < .01$, $d = 1.32$). Looking time to both target and distractor again made up the minority of their dwell time, however; children spent the majority of learning trials looking at the speaker's face (smallest proportion---2-year-olds in the Non-Salient Condition: .51).
+In contrast to the prediction of the na\"{i}ve cue-combination account, children's looking behavior during learning trials was not significantly affected by the salience of the target and competitor (Figure~\ref{fig:exp1_2}, top). As in Experiment 1, children of all ages spent more time looking at the target than the competitor (smallest $t(14)  = 3.53$, $p < .01$). Looking time to both target and distractor again made up the minority of their dwell time, however; children spent the majority of learning trials looking at the speaker's face (smallest proportion---2-year-olds in the Non-Salient Condition: .51).
 
 
 \begin{figure}[t]
@@ -236,7 +216,7 @@ In contrast to the prediction of the na\"{i}ve cue-combination account, children
 	\caption{\label{fig:exp1_2} Proportion of time children fixated the correct target on Learning and Test trials in Experiments 1 (three youngest age groups) and 2. Salience had the predicted effect on looking behavior at test, but relatively little during learning. Each dot indicates one half-year age group and each error bar represents a 95\% confidence interval computed by non-parametric bootstrap. A proportion of .5 indicates chance performance.}
 \end{figure}
 
-In principle, this result could be due to the toys being too similar in their salience, making our experiment a weak test of the cue-combination model. But in fact, the differing salience of the two objects exerted a very strong effect during test trials---children in all age groups were strongly attracted to the salient object. When the target referent was salient, children at all ages looked at it for the majority of the window of analysis on Novel test trials (smallest $t(19)  = 2.96$, $p < .01$, $d = .66$). When the target was non-salient, no age group showed evidence of learning on Novel test trials (largest $t(13)  = 1.46$, $p = .17$, $d = .39$). Mutual Exclusivity (ME) trials showed the opposite pattern. When the target referent was salient, children in the two younger age groups looked at the correct referent on ME trials (the competitor) at \emph{below} chance levels (smallest $t(20) = -2.29$, $p < .05$, $d = .50$). In the Non-Salient condition, even the youngest children looked at the correct referent on ME trials at above chance levels (smallest $t(22) = 4.51$, $p < .001$, $d = .94$). Figure~\ref{fig:exp1_2} shows a summary of looking behavior across both Experiments 1 and 2.
+In principle, this result could be due to the toys being too similar in their salience, making our experiment a weak test of the cue-combination model. But in fact, the differing salience of the two objects exerted a very strong effect during test trials---children in all age groups were strongly attracted to the salient object. When the target referent was salient, children at all ages looked at it for the majority of the window of analysis on Novel test trials (smallest $t(19)  = 2.96$, $p < .01$). When the target was non-salient, no age group showed evidence of learning on Novel test trials (largest $t(13)  = 1.46$, $p = .17$). Mutual Exclusivity (ME) trials showed the opposite pattern. When the target referent was salient, children in the two younger age groups looked at the correct referent on ME trials (the competitor) at \emph{below} chance levels (smallest $t(20) = -2.29$, $p < .05$). In the Non-Salient condition, even the youngest children looked at the correct referent on ME trials at above chance levels (smallest $t(22) = 4.51$, $p < .001$). Figure~\ref{fig:exp1_2} shows a summary of looking behavior across both Experiments 1 and 2.
 
 The effect of perceptual cues at test did not appear to change across the age range we tested in Experiment 2. We fit a mixed-effects logistic regression to the data from both experiments to determine how age and experimental condition affected looking behavior during both learning and test. After controlling for performance on Familiar trials, this regression showed a significant effect of condition, and an interaction between trial type and condition. Children looked more to the salient object at test regardless of whether it was the target or competitor, and significantly more at the target during learning trials regardless of whether it was salient. No models with additional interactions improved fit to the data, indicating that neither condition nor trial type interacted with age (Table~\ref{tab:model_table}). 
 
@@ -287,10 +267,6 @@ Our data suggest that domain-general proceses in children's cognition likely pla
 \paragraph{Unifying social and attentional accounts of word learning}
 
 Learning a new word relies on processes that work at multiple time-scales. Children need to identify a speaker's referent in-the-moment, encode a mapping between the label and referent, recall multiple labeling events and integrate across them, and use their learned mappings to identify the object in novel contexts \cite{Frank2009a,McMurray2012, Yu2012b}. We have presented data here that falsify some predictions of a na\"ive cue-combination model, but our critiques converge with a broader theoretical problem: na\"{i}ve cue-combination does not distinguish among the component problems that word learners must solve. In our experiments, for instance, children used different cues to identify a speaker's referent and to find it in a novel test context. Building a more satisfying model of the development of word learning will require integrating the cues children use to identify referents with an understanding of how these cues interact with attentional control, memory, and the conversational contexts in which naming occurs \cite{Frank2013a, Yurovsky2013c}.
-
-\section{Acknowledgments}
-
-We are grateful to Janelle Klaas for collecting the data, to Carissa Romero for help in stimulus creation, and to Molly Lewis and all of the members of the Language and Cognition Lab for their feedback on this project. In addition, we thank the parents, children, and staff at the San Jose Children's Discovery Museum for supporting us in collecting developmental data. This work was supported by NIH NRSA F32HD075577 to DY as well as grants from the Merck Scholars Foundation and the Stanford Center Health Research Initiative to MCF.
 
 \bibliographystyle{apacite}
 \bibliography{library12}
