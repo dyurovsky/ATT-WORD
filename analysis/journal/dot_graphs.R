@@ -14,8 +14,32 @@ p <- ggplot(train.data.e1.notd, aes(x=age.grp, y=prop,colour=trial.type,
                      labels = c("1", "1.5", "2","2.5","3","3.5")) + 
   scale_y_continuous(limits = c(0,1), breaks=seq(0,1,.2),
                      name = "Prop. Looks to ROI") +
-  theme_bw(base_size=12) + 
+  theme_bw(base_size=12) +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + 
   geom_dl(aes(label=trial.type),
+          method=list(dl.trans(x=x +.2),"last.qp",cex=.8)) + 
+  scale_color_manual(values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1"))
+print(p)
+
+
+quartz(width=12,height=3,title = "Learning")
+p <- ggplot(filter(train.data.subj.trial ,aoi != "TD",exp == "Balanced",
+                   age.grp < 4),
+            aes(x=age.grp, y=na.mean,colour=aoi)) +
+  facet_grid(. ~ trial.num) + 
+  geom_pointrange(aes(ymin = na.mean-ci.low,
+                      ymax = na.mean+ci.high),
+                  position = position_dodge(.1),
+                  size=.8)+
+  geom_line() +
+  scale_x_continuous(limits = c(.9,4.4), breaks=seq(1,3.5,.5),
+                     name = "Age(years)",
+                     labels = c("1", "1.5", "2","2.5","3","3.5")) + 
+  scale_y_continuous(limits = c(0,1), breaks=seq(0,1,.2),
+                     name = "Prop. Looks to ROI") +
+  theme_bw(base_size=12) +
+  #theme(panel.grid.major = element_blank()) + 
+  geom_dl(aes(label=aoi),
           method=list(dl.trans(x=x +.2),"last.qp",cex=.8)) + 
   scale_color_manual(values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1"))
 print(p)
@@ -39,9 +63,30 @@ p <- ggplot(preflook.data.e1,
   scale_y_continuous(limits = c(.4,1), breaks=seq(.4,1,.1),
                      name = "Prop. Looks to Target vs. Competitor") +
   theme_bw(base_size=18) + 
-  theme(legend.position=c(.95,.6),legend.title=element_blank()) +
+  theme(legend.position=c(.95,.6),legend.title=element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank())  +
   scale_color_manual(values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1"))
 print(p)
+
+quartz(width=4,height=4,title = "Test Data")
+p <- ggplot(filter(preflook.data.e1,trial.type=="Novel"), 
+            aes(x=age.grp, y=prop,colour=trial.type))+
+  geom_pointrange(aes(ymin = prop-cih,
+                      ymax = prop+cih),
+                  position = position_dodge(.3),
+                  size=1.25)+
+  geom_hline(aes(yintercept=.5),lty=2)  +
+  geom_line(aes(group=trial.type),size=1.25) +
+  scale_x_continuous(breaks=c(1,1.5,2,2.5,3,3.5),
+                     name = "Age(years)",
+                     labels = c("1","1.5","2","2.5","3","3.5")) + 
+  scale_y_continuous(limits = c(.4,1), breaks=seq(.4,1,.1),
+                     name = "Prop. Looks to Target") +
+  theme_bw(base_size=16) + 
+  theme(legend.position=c(.95,.6),legend.title=element_blank()) +
+  scale_color_manual(values=man_cols[2],breaks=c("3.5","3","2.5","2","1.5","1"))
+print(p)
+
 
 ###############################################################################
 ############## FIGURE 10: COMPARING SALIENCE AT LEARNING AND TEST #############
@@ -61,7 +106,8 @@ p <- ggplot(preflook.data.e1and2,
   scale_y_continuous(limits = c(.25,1), breaks=seq(.3,1,.1),
                      name = "Prop. Looks to Target") +
   theme_bw(base_size=14) + 
-  theme(legend.position="none")+
+  theme(legend.position="none",
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank())+
   geom_dl(aes(label=exp),method=list(dl.trans(x=x +.3),"last.qp",cex=1)) + 
   scale_color_manual(values=man_cols,breaks=c("2","1.5","1"))
 print(p)

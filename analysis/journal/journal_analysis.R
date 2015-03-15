@@ -2,7 +2,7 @@
 rm(list=ls())
 
 #get lab version of useful R functions
-source('../helpers/useful.R')
+source('~/Projects/Other/Ranalysis/useful_dplyr.R')
 
 #load libraries for data manipulation and graphing
 library(directlabels)
@@ -22,6 +22,11 @@ TRAIN_END <- 4
 #Use color-brewer colors for graphing
 man_cols <- c("#e41a1c","#377eb8","#4daf4a",
               "#984ea3","#ff7f00","#a65628")
+
+
+
+
+
 
 ###############################################################################
 ################################ LOADING DATA #################################

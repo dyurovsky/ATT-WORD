@@ -30,6 +30,15 @@ train.data <- data %>%
     Competitor = sum(aoi=="Competitor")/(sum(aoi!="NA")),
     TD = sum(aoi=="Target")/(sum(aoi=="Target")+sum(aoi=="Competitor")))
 
+# 
+# train.data.subj.trial <- train.data %>%
+#   group_by(trial.num,add=TRUE) %>%
+#   summarise_each(funs(na.mean),(-trial.num)) %>%
+#   gather(aoi,prop,Face:TD) %>%
+#   group_by(exp,trial.num,age.grp,aoi) %>%
+#   summarise_each(funs(na.mean,ci.low,ci.high),prop)
+#   
+
 #summarize by subject
 train.data.subj <- train.data %>%
   summarise_each(funs(na.mean),(-trial.num)) %>%
