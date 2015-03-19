@@ -68,6 +68,27 @@ p <- ggplot(preflook.data.e1,
   scale_color_manual(values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1"))
 print(p)
 
+quartz(width=10,height=4.5,title = "Test Data")
+p <- ggplot(filter(preflook.data.e1,trial.type != "Learning"), 
+            aes(x=age.grp, y=prop,colour=trial.type))+
+  facet_grid(. ~ trial.type) +
+  geom_pointrange(aes(ymin = prop-cih,
+                      ymax = prop+cih),
+                  position = position_dodge(.3),
+                  size=.8)+
+  geom_hline(aes(yintercept=.5),lty=2)  +
+  geom_line(aes(group=trial.type)) +
+  scale_x_continuous(breaks=c(1,1.5,2,2.5,3,3.5),
+                     name = "Age(years)",
+                     labels = c("1","1.5","2","2.5","3","3.5")) + 
+  scale_y_continuous(limits = c(.4,1), breaks=seq(.4,1,.1),
+                     name = "Prop. Looks to Target vs. Competitor") +
+  theme_bw(base_size=18) + 
+  theme(legend.position=c(.95,.6),legend.title=element_blank(),
+        panel.grid.major = element_blank(), panel.grid.minor = element_blank())  +
+  scale_color_manual(values=man_cols,breaks=c("3.5","3","2.5","2","1.5","1"))
+print(p)
+
 quartz(width=4,height=4,title = "Test Data")
 p <- ggplot(filter(preflook.data.e1,trial.type=="Novel"), 
             aes(x=age.grp, y=prop,colour=trial.type))+
