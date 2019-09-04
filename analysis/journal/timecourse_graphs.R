@@ -56,27 +56,49 @@ print(p)
 ###############################################################################
 ################## FIGURE 4: ONSET-CONTINGENT PLOT FOR EXP 1 ##################
 ###############################################################################
-quartz(width=12,height=6,title = "Test Looking")
-p <- ggplot(e1.split.timecourse, aes(x=time.step, y=roll.mean, 
+quartz(width=12,height=4.5,title = "Test Looking")
+p <- ggplot(filter(e1.split.timecourse, trial.type %in% c("Novel", "ME")),
+            aes(x=time.step, y=roll.mean, 
                                colour=trial.type, fill = trial.type,
-                               linetype=split.type,))+
+                               linetype=split.type))+
   facet_grid(trial.type ~ age.grp) +
   geom_line(size=.8) +
   geom_hline(aes(yintercept=.5),lty=2)+
-  geom_ribbon(aes(ymin=min,ymax=max),fill="gray",alpha=.2, 
-              colour=NA) +
   scale_x_continuous(limits = c(0,TIMECOURSE_END),
                      breaks=seq(-1,TIMECOURSE_END),
                      name = "Time(s)") + 
   scale_y_continuous(limits = c(0,1), breaks=c(0,.25,.5,.75,1),
                      name = "Prop. Looks to Switch") +
-  theme_bw(base_size=14) + theme(legend.position=c(.055,.932)) +
+  theme_bw(base_size=14) + theme(legend.position=c(.15,.932), legend.direction = "horizontal") +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + 
   guides(colour=FALSE,linetype=guide_legend(title=NULL)) +
   scale_color_manual(values=man_cols[1:3]) +
   scale_fill_manual(values=man_cols[1:3]) +
   scale_linetype_discrete(name="Split Type")
 print(p)
+
+
+quartz(width=12,height=4.5,title = "Test Looking")
+p <- ggplot(filter(e1.split.timecourse,trial.type %in% c("Novel", "ME")),
+            aes(x=time.step, y=roll.mean, 
+                colour=trial.type, fill = trial.type))+
+  facet_grid(split.type ~ age.grp) +
+  geom_line(size=.8) +
+  geom_hline(aes(yintercept=.5),lty=2)+
+  scale_x_continuous(limits = c(0,TIMECOURSE_END),
+                     breaks=seq(-1,TIMECOURSE_END),
+                     name = "Time(s)") + 
+  scale_y_continuous(limits = c(0,1), breaks=c(0,.25,.5,.75,1),
+                     name = "Prop. Looks to Switch") +
+  theme_bw(base_size=14) + theme(legend.position=c(.15,.932), 
+                                 legend.direction="horizontal") +
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) + 
+  guides(linetype=FALSE,colour=guide_legend(title=NULL)) +
+  scale_color_manual(values=man_cols[1:3]) +
+  scale_fill_manual(values=man_cols[1:3]) +
+  scale_linetype_discrete(name="Trial Type")
+print(p)
+
 
 ###############################################################################
 ################ FIGURE 7: LEARNING TRIAL TIMECOURSE IN EXP 2 #################

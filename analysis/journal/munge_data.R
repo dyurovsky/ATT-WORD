@@ -41,7 +41,7 @@ train.data <- data %>%
 
 #summarize by subject
 train.data.subj <- train.data %>%
-  summarise_each(funs(na.mean),(-trial.num)) %>%
+  summarise_at(vars(Face, Target, Competitor, TD), na.mean) %>%
   gather(aoi,prop,Face:TD)
 
 #aggregate by trial.type

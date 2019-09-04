@@ -6,3 +6,11 @@
 *.fls
 *.out
 *.toc
+.Rproj.user
+.Rhistory
+
+.DS_Store
+
+*.bbl
+*.blg
+*.gz

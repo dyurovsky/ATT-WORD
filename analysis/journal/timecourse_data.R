@@ -52,7 +52,7 @@ e1.split.type <- e1.timecourse.data %>%
   select(subj,trial.type,trial.num,split.type)
 
 # Subset test data to just for split analysis
-e1.split.data <- merge(e1.timecourse.data,e1.split.type) %>%
+e1.split.data <-left_join(e1.timecourse.data,e1.split.type) %>%
   filter(split.type == "Target" | split.type == "Competitor",
          time.step >= 0)
 

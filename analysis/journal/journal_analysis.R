@@ -2,14 +2,15 @@
 rm(list=ls())
 
 #get lab version of useful R functions
-source('~/Projects/Other/Ranalysis/useful_dplyr.R')
+source('useful.R')
 
 #load libraries for data manipulation and graphing
+library(dplyr)
 library(directlabels)
 library(xtable)
 library(magrittr)
 library(tidyr)
-
+library(readr)
 #splits ages into half-years
 split.ages <-function(x) {floor(x*2)/2}
 
@@ -27,16 +28,14 @@ man_cols <- c("#e41a1c","#377eb8","#4daf4a",
 ################################ LOADING DATA #################################
 ###############################################################################
 #read looking data
-sal.data <- read.csv("../../data/salient.csv",header=TRUE)
-nonsal.data <- read.csv("../../data/nonsalient.csv",header=TRUE)
-balanced.data <- read.csv("../../data/balanced.csv",header=TRUE)
+sal.data <- read_csv("../../data/salient.csv") %>%
+  mutate(exp = "Salient")
+nonsal.data <- read_csv("../../data/nonsalient.csv") %>%
+  mutate(exp = "NonSalient")
+balanced.data <- read_csv("../../data/balanced.csv") %>%
+  mutate(exp = "Balanced")
 
-#mark experiment
-sal.data$exp <- "Salient"
-nonsal.data$exp <- "NonSalient"
-balanced.data$exp <- "Balanced"
-
-data <- rbind(sal.data,nonsal.data,balanced.data) %>%
+data <- bind_rows(sal.data,nonsal.data,balanced.data) %>%
   #pre-process data values to be more English-readable
   mutate(
     trial.type = factor(trial.type,
